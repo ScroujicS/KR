@@ -1,0 +1,41 @@
+version: "2.0"
+
+nlu:
+- intent: greet
+  examples: |
+    - Привет
+    - Здравствуйте
+    - Приветствую
+
+- intent: goodbye
+  examples: |
+    - Пока
+    - Прощай
+    - До свидания
+
+- intent: thank_you
+  examples: |
+    - Спасибо
+    - Благодарю
+
+- intent: symptoms_grip
+  examples: |
+    - симптомы температура?
+    - насморк
+
+- intent: symptoms_revm
+  examples: |
+    - боль в мышцах
+    - мышцы
+    - болит рука
+    - боль в суставах
+    - колено
+
+- intent: symptoms_stom
+  examples: |
+    - болит челюсть
+    - зубы
+    - болит зуб
+    - щелкает челюсть
+
+

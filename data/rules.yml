@@ -1,0 +1,31 @@
+version: "2.0"
+
+rules:
+- rule: Приветствие
+  steps:
+  - intent: greet
+  - action: utter_greet
+
+- rule: Прощание
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+
+- rule: Благодарность
+  steps:
+  - intent: thank_you
+  - action: utter_thank_you
+
+- rule: Грипп
+  steps:
+  - intent: symptoms_grip
+  - action: utter_symptoms_grip
+
+- rule: Суставы
+  steps:
+  - intent: symptoms_revm
+  - action: utter_symptoms_revm
+- rule: Челюсть
+  steps:
+  - intent: symptoms_stom
+  - action: utter_symptoms_stom
