@@ -52,8 +52,8 @@ stories:
   steps:
   - intent: symptoms_head
   - action: utter_symptoms_head
-  - intent: back
-  - action: utter_back_symptoms_head
+  - intent: zatylok
+  - action: utter_zatylok_symptoms_head
 
 - story: head 2
   steps:
