@@ -8,6 +8,32 @@ intents:
   - mood_great
   - mood_unhappy
   - bot_challenge
+  - thank_you
+  - yeap
+  - not
+  - symptoms_grip
+  - symptoms_revm
+  - symptoms_stom
+  - symptoms_ear
+  - in
+  - out
+  - symptoms_eye
+  - red_eyes
+  - not_see
+  - symptoms_head
+  - back
+  - forehead
+  - temple
+  - symptoms_heart
+  - throat
+  - cough
+  - not_cough
+  - sputum
+  - not_sputum
+  - symptoms_stomach
+  - open
+  - close
+  - symptoms_throat
 
 responses:
   utter_greet:
