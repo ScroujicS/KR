@@ -21,11 +21,42 @@ rules:
   - intent: symptoms_grip
   - action: utter_symptoms_grip
 
-- rule: Суставы
-  steps:
-  - intent: symptoms_revm
-  - action: utter_symptoms_revm
 - rule: Челюсть
   steps:
   - intent: symptoms_stom
   - action: utter_symptoms_stom
+
+- rule: Ухо
+  steps:
+  - intent: symptoms_ear
+  - action: utter_symptoms_ear
+
+- rule: Голова
+  steps:
+  - intent: symptoms_head
+  - action: utter_symptoms_head
+
+- rule: Рана
+  steps:
+  - intent: symptoms_revm
+  - action: utter_symptoms_revm
+
+- rule: Глаза
+  steps:
+  - intent: symptoms_eye
+  - action: utter_symptoms_eye
+
+- rule: Сердце
+  steps:
+  - intent: symptoms_heart
+  - action: utter_symptoms_heart
+
+- rule: Горло
+  steps:
+  - intent: symptoms_throat
+  - action: utter_symptoms_throat
+
+- rule: Живот
+  steps:
+  - intent: symptoms_stomach
+  - action: utter_symptoms_revm
