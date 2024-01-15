@@ -28,3 +28,150 @@ stories:
   - action: utter_did_that_help
   - intent: deny
   - action: utter_goodbye
+
+- story: ear 1
+  steps:
+    - intent: symptoms_ear
+    - action: utter_symptoms_ear
+    - or:
+      - intent: yeap
+      - intent: in
+    - action: utter_in_symptoms_ear
+
+- story: ear 2
+  steps:
+  - intent: symptoms_ear
+  - action: utter_symptoms_ear
+  - or:
+    - intent: out
+    - intent: not
+  - action: utter_out_problem
+  - checkpoint: out_problem
+
+- story: head 1
+  steps:
+  - intent: symptoms_head
+  - action: utter_symptoms_head
+  - intent: back
+  - action: utter_back_symptoms_head
+
+- story: head 2
+  steps:
+  - intent: symptoms_head
+  - action: utter_symptoms_head
+  - intent: forehead
+  - action: utter_forehead_symptoms_head
+
+- story: head 3
+  steps:
+  - intent: symptoms_head
+  - action: utter_symptoms_head
+  - intent: temple
+  - action: utter_temple_symptoms_head
+
+- story: eye 1
+  steps:
+  - or:
+    - intent: symptoms_eye
+    - intent: red_eyes
+    - intent: not_see
+  - action: utter_symptoms_eye
+  - intent: red_eyes
+  - action: utter_red_eyes
+
+- story: eye 2
+  steps:
+  - or:
+    - intent: symptoms_eye
+    - intent: red_eyes
+    - intent: not_see
+  - action: utter_symptoms_eye
+  - intent: not_see
+  - action: utter_not_see
+
+- story: throat 1
+  steps:
+  - intent: symptoms_throat
+  - action: utter_symptoms_throat
+  - or:
+    - intent: not
+    - intent: not_cough
+  - action: utter_not_cough
+
+- story: throat 2
+  steps:
+    - intent: symptoms_throat
+    - action: utter_symptoms_throat
+    - or:
+      - intent: yeap
+      - intent: cough
+    - action: utter_cough
+    - or:
+      - intent: not
+      - intent: not_sputum
+    - action: utter_not_sputum
+
+- story: throat 3
+  steps:
+    - intent: symptoms_throat
+    - action: utter_symptoms_throat
+    - or:
+      - intent: yeap
+      - intent: cough
+    - action: utter_cough
+    - or:
+      - intent: yeap
+      - intent: sputum
+    - action: utter_sputum
+
+- story: stomach 1
+  steps:
+    - intent: symptoms_stomach
+    - action: utter_symptoms_revm
+    - intent: out
+    - action: utter_out_problem
+    - checkpoint: out_problem
+
+- story: stomach 2
+  steps:
+    - intent: symptoms_stomach
+    - action: utter_symptoms_revm
+    - intent: in
+    - action: utter_symptoms_in_stomach
+
+- story: skin 1
+  steps:
+    - or:
+      - intent: symptoms_revm
+      - intent: open
+      - intent: close
+    - action: utter_symptoms_revm
+    - intent: out
+    - action: utter_out_problem
+    - checkpoint: out_problem
+
+- story: skin 2
+  steps:
+    - or:
+      - intent: symptoms_revm
+      - intent: open
+      - intent: close
+    - action: utter_symptoms_revm
+    - intent: in
+    - action: utter_in_problem
+
+- story: out problem 1
+  steps:
+    - checkpoint: out_problem
+    - or:
+      - intent: open
+      - intent: out
+    - action: utter_open
+
+- story: out problem 2
+  steps:
+    - checkpoint: out_problem
+    - or:
+      - intent: close
+      - intent: in
+    - action: utter_close
